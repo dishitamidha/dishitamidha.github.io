@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Dishita Midha — Computer Vision Researcher</title>
+<link rel="robots" href="/robots.txt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  /* ============================================
+     ⚙️  CUSTOMIZATION GUIDE - TABLE OF CONTENTS
+     
+     Use Ctrl+F to search for the EDIT text to
+     quickly find and customize any value.
+     
+     LAYOUT & WIDTH
+     - "width controls the overall page container width" — Page container width
+     - "width should match .page-grid" — Nav bar width
+     
+     TYPOGRAPHY - BASE
+     - "Change this to increase/decrease all body text size" — Base font size
+     
+     TYPOGRAPHY - NAVIGATION
+     - "font-size controls size of \"Dishita Midha\" text" — Nav name
+     - "font-size controls size of navigation links" — Nav links
+     
+     TYPOGRAPHY - HERO SECTION
+     - "padding controls space above/below the main heading section" — Hero padding
+     - "Change to adjust \"Computer Vision Engineer\" text size" — Hero eyebrow
+     - "font-size controls the size of main heading" — Main name (h1)
+     - "Space between name and tagline" — Name/tagline spacing
+     - "Change to adjust tagline text size" — Tagline font
+     - "Space above tagline" — Tagline margin
+     
+     TYPOGRAPHY - SECTIONS
+     - "padding controls space before/after each section" — Section padding
+     - "Increase if content is hidden behind nav bar" — Scroll offset
+     - "Section heading size" — Section label font
+     - "Space below section heading" — Section label margin
+     
+     TYPOGRAPHY - ABOUT SECTION
+     - "font-size controls the About text size" — About text
+     - "Space between paragraphs" — Paragraph spacing
+     
+     RESEARCH SECTION
+     - "Controls Research section grid layout" — Research grid
+     - "Inside padding for research items" — Research item padding
+     - "Hover effect - change background color on hover" — Research hover
+     - "Research topic title size" — Research title font
+     - "font-size controls research description text" — Research description
+     
+     EXPERIENCE SECTION
+     - "Company name size" — Company name font
+     - "Date range size" — Date/period font
+     - "Job title size" — Job title font
+     - "Experience description text size" — Experience body text
+     
+     PROJECT CARDS ⭐
+     - "Space between project cards" — Project card spacing
+     - "Inside padding for cards" — Project card padding
+     - "Configurable gap between text content and visual image" — Text/image gap
+     - "Project title size" — Project h4 font
+     - "font-size controls text in project cards" — Project paragraph font
+     - "Project card min-height for square appearance" — Card height
+     
+     SKILLS SECTION
+     - "Controls skill tags layout and sizing" — Skills grid
+     - "Skill category heading size" — Skill group headings
+     - "font-size controls individual skill tag text" — Skill tags
+     
+     AWARDS SECTION
+     - "Controls awards section layout and spacing" — Awards layout
+     - "Space around each award" — Award item padding
+     - "font-size controls award rank/number size" — Award rank font
+     - "font-size controls award name text size" — Award name font
+     - "Award description text size" — Award description font
+     
+     EDUCATION SECTION
+     - "Controls education entries layout and spacing" — Education layout
+     - "Space around each education entry" — Education entry padding
+     - "font-size controls school/university name size" — School name font
+     - "font-size controls degree text size" — Degree font
+     - "font-size controls education meta info size" — Education meta font
+     
+     FOOTER
+     - "Space above/below footer" — Footer padding
+     - "Footer text size" — Footer font
+     
+     MODAL (RESUME)
+     - "Change 0.5 to adjust overlay darkness" — Overlay opacity
+     - "Modal width percentage" — Modal width
+     - "Maximum modal width in pixels" — Modal max-width
+     - "Modal height" — Modal height
+     - "Space inside header" — Modal header padding
+     - "\"Resume\" title size" — Resume heading font
+     - "Close button size" — Close (×) button font
+     
+     MOBILE RESPONSIVE (screens < 600px)
+     - "Hide nav links on mobile" — Mobile nav
+     - "Adjust hero padding for mobile" — Mobile hero
+     - "Reposition theme toggle on mobile" — Mobile toggle
+     - "Make research grid single column on mobile" — Mobile research
+     - "Make modal bigger relative on mobile" — Mobile modal
+     
+     ============================================ */
+  
+  :root {
+    --bg: #faf9f8;
+    --bg2: #f2efed;
+    --text: #1c1b1b;
+    --text-muted: #706868;
+    --accent: #a05068;
+    --accent2: #7a5c6a;
+    --border: #e0d8d8;
+    --card: #ffffff;
+    --tag-bg: #f5eef0;
+    --tag-text: #6b4f59;
+    --link: #a05068;
+    --shadow: rgba(28,20,22,0.07);
+  }
+  [data-theme="dark"] {
+    --bg: #181516;
+    --bg2: #211c1e;
+    --text: #ede8e8;
+    --text-muted: #9a8c90;
+    --accent: #d4899f;
+    --accent2: #b07a90;
+    --border: #332a2d;
+    --card: #211c1e;
+    --tag-bg: #2a2024;
+    --tag-text: #c0a0ac;
+    --link: #d4899f;
+    --shadow: rgba(0,0,0,0.35);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 18px; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 10px; /* EDIT: Change this to increase/decrease all body text size */
+    line-height: 1.7;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  /* ── THEME TOGGLE ── */
+  .theme-toggle {
+    position: fixed;
+    top: 1.65rem;
+    right: 2rem;
+    z-index: 100;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    padding: 0.35rem 0.9rem;
+    cursor: pointer;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ── LAYOUT ── */
+  /* EDIT: width controls the overall page container width */
+  .page-grid {
+    width: 75%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ── NAV ── */
+  nav {
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 50;
+    backdrop-filter: blur(6px);
+  }
+  /* EDIT: width should match .page-grid for consistent width, height controls nav bar thickness */
+  nav .inner {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem; /* EDIT: Decrease/increase for smaller/larger nav bar */
+  }
+  /* EDIT: font-size controls size of "Dishita Midha" text in nav */
+  .nav-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    letter-spacing: 0.01em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.8rem;
+    list-style: none;
+  }
+  /* EDIT: font-size controls size of navigation links (About, Experience, etc) */
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ── HERO ── */
+  /* EDIT: padding controls space above/below the main heading section */
+  .hero {
+    padding: 3rem 0 2rem;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+  .hero-content {
+    flex: 1;
+  }
+  .hero-image {
+    width: 280px;
+    height: 280px;
+    min-width: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+  /* EDIT: font-size controls the size of main heading */
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.15rem, 6.75vw, 3.35rem); /* min, responsive, max sizes */
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.8rem; /* EDIT: Space between name and tagline */
+  }
+  h1 .greeting {
+    font-size: 0.7em;
+    font-weight: 300;
+    color: var(--text-muted);
+    display: block;
+  }
+  h1 .name {
+    color: var(--accent);
+    font-size: 1em;
+    font-weight: 300;
+  }
+  h1 .surname {
+    color: var(--accent);
+    font-weight: 300;
+    font-size: 1em;
+  }
+  .hero-tagline {
+    font-size: 0.95rem; /* EDIT: Change to adjust tagline text size */
+    color: var(--text-muted);
+    margin-top: 1.5rem; /* EDIT: Space above tagline */
+    max-width: 680px;
+  }
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2.2rem;
+  }
+  .hero-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 0.45rem 1rem;
+    border-radius: 0.2rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .hero-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--tag-bg);
+  }
+  .hero-link svg { width: 14px; height: 14px; fill: currentColor; }
+
+  /* ── SECTIONS ── */
+  /* EDIT: padding controls space before/after each section, scroll-margin-top controls offset when clicking nav links */
+  section { 
+    padding: 0 0 2rem 0; /* top, right, bottom, left */
+    scroll-margin-top: 5.5rem; /* EDIT: Increase if content is hidden behind nav bar when scrolling to section */
+  }
+  section:last-child { border-bottom: none; }
+
+  /* EDIT: These control section heading (About, Experience, etc) styling */
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.5rem; /* EDIT: Section heading size */
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0rem; /* EDIT: Space below section heading */
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── ABOUT ── */
+  /* EDIT: font-size controls the About text size */
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--text);
+    max-width: 680px;
+  }
+  .about-text p + p { margin-top: 1rem; } /* EDIT: Space between paragraphs */
+
+  /* ── RESEARCH AREAS ── */
+  /* EDIT: Controls Research section grid layout and research item styling */
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 5px;
+    margin-top: 0.5rem;
+  }
+  .research-item {
+    background: var(--bg);
+    padding: 1.4rem 1.6rem; /* EDIT: Inside padding for research items */
+    transition: background 0.2s;
+    border: 1px solid var(--border);
+  }
+  /* EDIT: Hover effect - change background color on hover */
+  .research-item:hover { background: var(--tag-bg); }
+  .research-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; /* EDIT: Research topic title size */
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+    color: var(--accent);
+  }
+  /* EDIT: font-size controls research description text */
+  .research-item p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* ── EXPERIENCE ── */
+  .exp-entry {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem 0;
+    gap: 0.8rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .exp-entry:first-child { border-top: none; }
+  .exp-entry:last-child { border-bottom: none; }
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .exp-company {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; /* EDIT: Company name size */
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--text);
+    transition: color 0.2s;
+  }
+  .exp-company:hover {
+    color: var(--accent);
+  }
+  .exp-period {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; /* EDIT: Date range size (Aug 2024 — Present) */
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+  .exp-role {
+    font-size: 0.88rem; /* EDIT: Job title size (Applied AI Researcher) */
+    color: var(--accent2);
+    font-style: italic;
+    margin-top: -0.3rem;
+  }
+  .exp-body { 
+    font-size: 0.95rem; /* EDIT: Experience description text size */
+    color: var(--text-muted); 
+    line-height: 1.7; 
+  }
+  .exp-highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-top: 0.6rem;
+  }
+  .exp-highlights li {
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+    position: relative;
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .exp-highlights li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+    top: 0.2rem;
+  }
+  .exp-highlights li strong {
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  /* ── PROJECT CARDS ── */
+  /* EDIT: These are the cards in the Experience section with project details */
+  .project-cards {
+    display: grid;
+    gap: 1rem; /* EDIT: Space between project cards */
+    margin-top: 1rem;
+  }
+  .project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 1.0rem; /* EDIT: Inside padding for cards */
+    border-radius: 0.3rem;
+    transition: all 0.2s;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem; /* EDIT: Configurable gap between text content and visual image */
+    align-items: start;
+  }
+  .project-card.with-image {
+    grid-template-columns: 1fr 500px;
+    align-items: stretch;
+    min-height: 15rem; /* EDIT: Project card min-height for square appearance */
+  }
+  .project-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-self: stretch;
+  }
+  .project-card h4 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.2rem; /* EDIT: Project title size */
+    font-weight: 400;
+    color: var(--accent);
+    margin: 0;
+  }
+  /* EDIT: font-size controls text in project cards */
+  .project-card p {
+    font-size: 1.0rem;
+    color: var(--text);
+    line-height: 1.65;
+    margin: 0;
+  }
+  .project-card strong {
+    font-weight: 600;
+    color: var(--text);
+  }
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    align-self: stretch;
+    border-radius: 0.2rem;
+    border: none;
+    margin: 0;
+  }
+  .metric {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    background: var(--tag-bg);
+    color: var(--accent);
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.15rem;
+    border: 1px solid var(--border);
+  }
+
+  /* ── SKILLS ── */
+  /* EDIT: Controls skill tags layout and sizing */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  .skill-group h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem; /* EDIT: Skill category heading size (Languages, Frameworks, etc) */
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+  }
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  /* EDIT: font-size controls individual skill tag text (Python, PyTorch, etc) */
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.3rem 0.65rem;
+    border-radius: 0.2rem;
+    border: 1px solid var(--border);
+    letter-spacing: 0.02em;
+    transition: all 0.15s;
+  }
+  .tag:hover { background: var(--border); color: var(--text); }
+
+  /* ── AWARDS ── */
+  /* EDIT: Controls awards section layout and spacing */
+  .awards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .award-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.9rem 0; /* EDIT: Space around each award */
+    border-bottom: 1px solid var(--border);
+  }
+  .award-item:last-child { border-bottom: none; }
+  /* EDIT: font-size controls award rank/number size */
+  .award-rank {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--accent);
+    min-width: 2.5rem;
+    line-height: 1;
+  }
+  /* EDIT: font-size controls award name text size */
+  .award-name {
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  .award-name span {
+    display: block;
+    font-size: 0.8rem; /* EDIT: Award description text size */
+    color: var(--text-muted);
+    font-family: 'DM Mono', monospace;
+    margin-top: 0.1rem;
+  }
+
+  /* ── EDUCATION ── */
+  /* EDIT: Controls education entries layout and spacing */
+  .edu-entry {
+    padding: 1.5rem 0; /* EDIT: Space around each education entry */
+    border-bottom: 1px solid var(--border);
+  }
+  .edu-entry:last-child { border-bottom: none; }
+  /* EDIT: font-size controls school/university name size */
+  .edu-inst {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+  }
+  /* EDIT: font-size controls degree text size */
+  .edu-degree {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+    font-style: italic;
+  }
+  /* EDIT: font-size controls education meta info size (graduation year, location) */
+  .edu-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent2);
+    margin-top: 0.3rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 2.5rem 0; /* EDIT: Space above/below footer */
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; /* EDIT: Footer text size */
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── FADE IN ANIMATION ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── RESUME MODAL ── */
+  /* EDIT: Controls the overlay background when modal is open */
+  .resume-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* EDIT: Change 0.5 to adjust overlay darkness (0=transparent, 1=black) */
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+  }
+  .resume-modal.active {
+    display: flex;
+  }
+  /* EDIT: Controls modal window size and styling */
+  .resume-modal-content {
+    background: var(--card);
+    width: 90%; /* EDIT: Modal width percentage */
+    max-width: 900px; /* EDIT: Maximum modal width in pixels */
+    height: 90vh; /* EDIT: Modal height (90% of viewport height) */
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  /* EDIT: Controls "Resume" header styling */
+  .resume-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem; /* EDIT: Space inside header */
+    border-bottom: 1px solid var(--border);
+  }
+  .resume-modal-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; /* EDIT: "Resume" title size */
+    font-weight: 400;
+    color: var(--text);
+    margin: 0;
+  }
+  /* EDIT: Controls close button (×) styling */
+  .resume-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem; /* EDIT: Close button size */
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.2s;
+  }
+  .resume-modal-close:hover {
+    color: var(--accent);
+  }
+  .resume-modal-body {
+    flex: 1;
+    overflow: auto;
+  }
+  .resume-modal-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* ── MOBILE/TABLET ADJUSTMENTS (screens smaller than 600px) ── */
+  @media (max-width: 600px) {
+    .nav-links { display: none; } /* EDIT: Hide nav links on mobile */
+    .hero { padding: 4rem 0 3rem; flex-direction: column; align-items: center; } /* EDIT: Adjust hero padding for mobile */
+    .hero-image { width: 220px; height: 220px; }
+    .theme-toggle { top: 0.8rem; right: 0.8rem; } /* EDIT: Reposition theme toggle on mobile */
+    .research-grid { grid-template-columns: 1fr; } /* EDIT: Make research grid single column on mobile */
+    .resume-modal-content { width: 95%; height: 95vh; } /* EDIT: Make modal bigger relative on mobile */
+  }
+</style>
+</head>
+<body>
+
+<!-- Resume Modal -->
+<div class="resume-modal" id="resumeModal">
+  <div class="resume-modal-content">
+    <div class="resume-modal-header">
+      <h2>Resume</h2>
+      <button class="resume-modal-close" onclick="closeResumeModal()">×</button>
+    </div>
+    <div class="resume-modal-body">
+      <object data="DishitaMidha_Resume_240226.pdf" type="application/pdf" style="width: 100%; height: 100%;"></object>
+    </div>
+  </div>
+</div>
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+  <span id="theme-label">◑ DARK</span>
+</button>
+
+<!-- Navigation -->
+<nav>
+  <div class="inner">
+    <span class="nav-name">Dishita Midha</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="page-grid">
+  <header class="hero fade-in">
+    <div class="hero-content">
+      <h1><span class="greeting">Hi I'm </span><span class="name">Dishita</span> <span class="surname">Midha</span></h1>
+      <p class="hero-tagline">Computer Vision Engineer with experience spanning across ML-based vision, Generative modeling, 3D
+reconstruction, Spatial Intelligence, and Robotics perception. Skilled at collaborating in cross-functional teams and driving complex projects from initial concept to production-grade deployment.</p>
+      <div class="hero-links">
+        <button onclick="openResumeModal()" class="hero-link" style="background: none; border: 1px solid var(--border); font-family: inherit; color: inherit; cursor: pointer;">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-8-6z"/><path d="M14 2v6h6M12 13h-2m0 4h-2m4-4h2m0 4h2" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+          Resume
+        </button>
+        <a href="https://github.com/dishitamidha" target="_blank" class="hero-link">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          github.com/dishitamidha
+        </a>
+        <a href="https://linkedin.com/in/dishita-midha" target="_blank" class="hero-link">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:dishitamidha@gmail.com" class="hero-link">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          dishitamidha@gmail.com
+        </a>
+      </div>
+    </div>
+    <img src="pfp.jpeg" alt="Dishita Midha" class="hero-image">
+  </header>
+
+  <!-- About -->
+  <section id="about" class="fade-in">
+    <div class="section-label">About</div>
+    <div class="about-text">
+      <p>I am an Applied Research Engineer at <a href="https://www.spyne.ai/" target="_blank" style="color: var(--accent); text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Spyne.ai</a> advancing Studio AI, an automated cataloging platform for the automotive industry leveraging 3D computer vision and generative modeling.</p>
+      <p>Previously, I interned twice at <a href="https://research.samsung.com/sri-b" target="_blank" style="color: var(--accent); text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Samsung Research, Bangalore</a>, where I worked on XR applications with a strong focus on the intersection of 3D reconstruction and generative vision. I have also interned at <a href="https://www.jio.com/" target="_blank" style="color: var(--accent); text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Jio AI–CoE</a> in a similar domain.</p>
+      <p>I graduated in 2024 from <strong>Manipal Institute of Technology, Manipal</strong> with a Bachelor's degree in <strong>Data Science and Engineering</strong>. During my undergraduate studies, I was part of the AI/Perception team at <a href="https://www.youtube.com/c/MarsRoverManipal" target="_blank" style="color: var(--accent); text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Mars Rover Manipal</a>, a cross-functional student team that designs and builds Mars rover prototypes and competes in various international robotics competitions across the U.S. and Europe each year.</p>
+      <p>Outside of work, I enjoy traveling, hiking, cooking, and strength training. Learning the piano is next on my list. I’m always open to connecting with people from diverse backgrounds — feel free to reach out!</p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="fade-in">
+    <div class="section-label">Experience</div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <a href="https://www.spyne.ai/" target="_blank" class="exp-company">Spyne.ai</a>
+        <span class="exp-period">Aug 2024 — Present</span>
+      </div>
+      <div class="exp-role">Applied AI Researcher</div>
+      <div class="project-cards">
+        <div class="project-card with-image">
+          <div class="project-content">
+            <h4>Video to 360 Stabilisation</h4>
+            <p>Developed the core stabilization logic for a video-to-360 spin pipeline that converts unconstrained handheld videos into consistent studio-quality turntable spins. Designed algorithms to correct car placement, tilt, and scale across frames under camera shake and jitter, using extrapolated 3D geometric priors to enforce spatial consistency and canonical alignment for stable downstream view synthesis. Live on <a href="https://www.spyne.ai/360-car-photography" target="_blank" style="color: var(--accent); text-decoration: underline;">Spyne's platform</a>.</p>
+          </div>
+          <img src="360.gif" alt="Video to 360 Stabilisation" class="project-image">
+        </div>
+        <div class="project-card with-image">
+          <div class="project-content">
+            <h4>Missing View Generation</h4>
+            <p>Led the development, fine-tuning, and deployment of a Multi-View Diffusion pipeline (Stable Diffusion backbone) to generate novel car views from &lt;8 images. The system estimates camera poses and depth to identify missing angles along a circular trajectory and conditions the model on camera embeddings, warped projections, and RGB inputs. Achieved <span class="metric">18–20 dB PSNR</span> and <span class="metric">0.80–0.85 SSIM</span>, competitive with SOTA.</p>
+          </div>
+          <img src="GENERATED_0.75-ezgif.com-video-to-gif-converter.gif" alt="Missing View Generation" class="project-image">
+        </div>
+        <div class="project-card">
+          <div class="project-content">
+            <h4>Improving Camera Pose Estimation under Sparse-View and Edited Imagery Constraints</h4>
+            <p>Conducted research on improving camera pose estimation in sparse-view vehicle imagery. Fine-tuned feature matching pipelines (SuperPoint + LightGlue) on car-specific datasets and developed a Blender-based 3D–2D annotation tool that enables semantic keypoints to be labeled once in 3D and automatically projected across views, improving annotation efficiency and consistency. Explored approaches for improving robustness under limited viewpoints, including VGGSfM integration and training transformer-based models such as FLARE for background-independent pose estimation in challenging scenarios (e.g., unnatural backgrounds).</p>
+          </div>
+        </div>
+        <div class="project-card with-image">
+          <div class="project-content">
+            <h4>Video to 3D</h4>
+            <p>Built a video-to-3D car reconstruction pipeline using advanced splatting-based representations to better model challenging specular and transparent surfaces. Integrated train-time pose refinement to improve reconstruction fidelity and reduce artifacts such as floaters, and implemented point-of-interest localization by projecting image-space detections into 3D via raycasting and depth alignment. Contributed in extending the web viewer (Three.js) to support rendering of the new representation.</p>
+          </div>
+          <video src="3d_short.mp4" alt="Video to 3D" class="project-image" muted loop controls></video>
+        </div>
+        <div class="project-card with-image">
+          <div class="project-content">
+            <h4>Interior Hotspot Tracking</h4>
+            <p>Developed and deployed a YOLO-based pipeline for 2D hotspot detection and tracking in car interiors, projecting tracked points onto panoramic views. Improved the super-resolution model for focus images of car parts to enhance image quality with fewer artifacts.</p>
+          </div>
+          <img src="interior_360.gif" alt="Interior Hotspot Tracking" class="project-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-company">Samsung R&D Institute, Bangalore</span>
+        <span class="exp-period">Jan 2024 — Jul 2024</span>
+      </div>
+      <div class="exp-role">Research Intern, Immersive XR Team</div>
+      <div class="project-cards">
+        <div class="project-card with-image">
+          <div class="project-content">
+            <h4>One-shot 3D Human Head Avatar Generation with Expression Re-enactment</h4>
+            <p>Proposed and developed a multi-model geometry-aware pipeline that reconstructs controllable 3D head avatars from a single frontal image and synthesizes realistic novel viewpoints within a −90° to +90° range. Achieved an average validation <span class="metric">PSNR of 28–30</span> with an inference time of <span class="metric">~2 seconds</span>, while improving expression re-enactment for complex facial motions (e.g., pouting, cheek puffing) through FLAME parameter refinement using facial landmarks and image features.</p>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: stretch;">
+            <img src="samsung.png" alt="3D Human Head Avatar Generation" class="project-image">
+            <p style="font-style: italic; font-size: 0.7rem; color: var(--text-muted); margin-top: 1.5rem; margin: 0; text-align: center;">Conceptual illustration of the project. Actual results cannot be shown due to company confidentiality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-company">Reliance Jio (AI-CoE)</span>
+        <span class="exp-period">Dec 2022 — Oct 2023</span>
+      </div>
+      <div class="exp-role">Computer Vision Research Intern</div>
+      <div class="project-cards">
+        <div class="project-card">
+          <p>Worked on estimating 3D shape and pose of animals from single images. Implemented non-rigid mesh registration using surface triangulation maps to align deformable shapes, and explored diffusion and GAN-based approaches for learning generative shape spaces of 3D meshes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-company">IHX Private Limited</span>
+        <span class="exp-period">Jun 2023 — Aug 2023</span>
+      </div>
+      <div class="exp-role">Data Science Intern</div>
+      <div class="project-cards">
+        <div class="project-card">
+          <div class="project-content">
+            <h4>Visual Quality Enhancement and Watermark Removal for Documents</h4>
+            <p>Developed a document enhancement model for watermark removal and restoration of degraded documents (photocopies, folds, artifacts). Built a custom training dataset using Augraphy with extended watermark generation capabilities and optimized a Pix2Pix-based model using a parallelized patching approach for sharper outputs. Deployed an end-to-end FastAPI pipeline that produces high-resolution, unwatermarked documents with <span class="metric">~0.6s inference</span> time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-company">Samsung R&D Institute, Bangalore</span>
+        <span class="exp-period">Oct 2022 — May 2023</span>
+      </div>
+      <div class="exp-role">PRISM Intern</div>
+      <div class="project-cards">
+        <div class="project-card with-image">
+          <div class="project-content">
+            <h4>Synthetic Dataset Generation Pipeline</h4>
+            <p>Developed a pipeline (team of three) for generating synthetic datasets by reconstructing 3D meshes from objects in images and compositing them into 2D scenes through randomized placement and orientation with collision avoidance. Designed a plane detection and segmentation method to identify valid horizontal surfaces for object placement achieving <span class="metric">~70% accuracy</span>. Utilized POINT-E and DMTET for 3D reconstruction and automated large-scale rendering in Blender. The project received the <strong>Excellence Award</strong> for outstanding contributions.</p>
+          </div>
+          <img src="prism.png" alt="Synthetic Dataset Generation Pipeline" class="project-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-company">Mars Rover Manipal</span>
+        <span class="exp-period">Jul 2021 — Aug 2023</span>
+      </div>
+      <div class="exp-role">Senior Member, AI & Perception</div>
+      <div class="project-cards">
+        <div class="project-card with-image">
+          <div class="project-content">
+            <h4>Autonomous Navigation & Localization Systems</h4>
+            <p>Worked in an interdisciplinary student team building Mars rover prototypes, contributing to the AI/Perception stack for autonomous navigation. Developed localization and obstacle avoidance algorithms and deployed them on embedded systems using real-world sensor data. Contributed to top finishes at international rover competitions including the European Rover Challenge, IRDC, and University Rover Challenge.</p>
+          </div>
+          <img src="mrm.png" alt="Autonomous Navigation & Localization Systems" class="project-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section id="awards" class="fade-in">
+    <div class="section-label">Awards & Recognition</div>
+    <div class="awards-list">
+      <div class="award-item">
+        <div class="award-rank">★</div>
+        <div class="award-name">Excellence Award — Samsung PRISM
+          <span>Outstanding contribution to the project 'A software tool to generate and overlay 3D Mesh Objects'</span>
+        </div>
+      </div>
+      <div class="award-item">
+        <div class="award-rank">2nd</div>
+        <div class="award-name">European Rover Challenge 2022 (Remote)
+          <span>Mentor, Navigation team</span>
+        </div>
+      </div>
+      <div class="award-item">
+        <div class="award-rank">21st</div>
+        <div class="award-name">University Rover Challenge 2022
+          <span>Worked on autonomous navigation · Conducted in Utah, USA</span>
+        </div>
+      </div>
+      <div class="award-item">
+        <div class="award-rank">3rd</div>
+        <div class="award-name">International Rover Design Challenge 2021
+          <span>Designed the Obstacle avoidance algorithm</span>
+        </div>
+      </div>
+      <div class="award-item">
+        <div class="award-rank">4th</div>
+        <div class="award-name">European Rover Challenge 2021 (Remote)
+          <span>Navigation team · Localisation and path planning for the Leo Rover</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Areas -->
+  <section id="research" class="fade-in">
+    <div class="section-label">Research Interests</div>
+    <div class="research-grid">
+      <div class="research-item">
+        <h3>Generative Modeling</h3>
+        <p>Diffusion models, GANs, multi-view synthesis, novel view generation</p>
+      </div>
+      <div class="research-item">
+        <h3>3D Reconstruction</h3>
+        <p>Gaussian Splatting, NeRF, Structure from Motion, depth estimation</p>
+      </div>
+      <div class="research-item">
+        <h3>Pose Estimation</h3>
+        <p>Feature matching, camera calibration, sparse-view pose recovery</p>
+      </div>
+      <div class="research-item">
+        <h3>Robotics Perception</h3>
+        <p>LiDAR-based obstacle avoidance, sensor fusion, edge deployment</p>
+      </div>
+      <div class="research-item">
+        <h3>Representation Learning</h3>
+        <p>Autoencoders, VAE, Triplanes, Normalizing flows</p>
+      </div>
+      <div class="research-item">
+        <h3>Production ML</h3>
+        <p>Triton inference, GPU autoscaling, latency-aware deployment</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="fade-in">
+    <div class="section-label">Education</div>
+    <div class="edu-entry">
+      <div class="edu-inst">Manipal Institute of Technology</div>
+      <div class="edu-degree">B.Tech in Data Science & Engineering · Minor in Finance</div>
+      <div class="edu-meta">2020 – 2024</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Dishita Midha</p>
+  </footer>
+</div>
+
+<script>
+  // Theme
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    document.getElementById('theme-label').textContent = isDark ? '◑ DARK' : '◑ LIGHT';
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+  }
+
+  // Restore saved theme
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('theme-label').textContent = '◑ LIGHT';
+  }
+
+  // Intersection Observer for fade-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Resume Modal
+  function openResumeModal() {
+    document.getElementById('resumeModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeResumeModal() {
+    document.getElementById('resumeModal').classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close modal when clicking outside
+  document.getElementById('resumeModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+      closeResumeModal();
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeResumeModal();
+    }
+  });
+</script>
+</body>
+</html>
