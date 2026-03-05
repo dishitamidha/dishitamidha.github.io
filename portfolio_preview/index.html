@@ -249,10 +249,12 @@
     width: clamp(180px, 30vw, 280px);
     height: clamp(180px, 30vw, 280px);
     min-width: clamp(180px, 30vw, 280px);
+    max-width: clamp(180px, 30vw, 280px);
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 8px 24px var(--shadow);
     flex-shrink: 0;
+    display: block;
   }
   /* EDIT: font-size controls the size of main heading */
   h1 {
@@ -513,12 +515,13 @@
   }
   .project-image {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
     align-self: stretch;
     border-radius: 0.2rem;
     border: none;
     margin: 0;
+    display: block;
   }
   .metric {
     font-family: 'DM Mono', monospace;
@@ -764,6 +767,17 @@
     body { padding-left: max(0px, env(safe-area-inset-left)); padding-right: max(0px, env(safe-area-inset-right)); }
     nav { padding-left: max(0px, env(safe-area-inset-left)); padding-right: max(0px, env(safe-area-inset-right)); }
   }
+
+  /* Mobile resume button - opens in new tab */
+  @media (max-width: 768px) {
+    .resume-btn-modal { display: none; }
+    .resume-btn-link { display: inline-flex; }
+  }
+
+  @media (min-width: 769px) {
+    .resume-btn-modal { display: inline-flex; }
+    .resume-btn-link { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -808,10 +822,14 @@
       <p class="hero-tagline">Computer Vision Engineer with experience spanning across ML-based vision, Generative modeling, 3D
 reconstruction, Spatial Intelligence, and Robotics perception. Skilled at collaborating in cross-functional teams and driving complex projects from initial concept to production-grade deployment.</p>
       <div class="hero-links">
-        <button onclick="openResumeModal()" class="hero-link" style="background: none; border: 1px solid var(--border); font-family: inherit; color: inherit; cursor: pointer;">
+        <button onclick="openResumeModal()" class="hero-link resume-btn-modal" style="background: none; border: 1px solid var(--border); font-family: inherit; color: inherit; cursor: pointer;">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-8-6z"/><path d="M14 2v6h6M12 13h-2m0 4h-2m4-4h2m0 4h2" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
           Resume
         </button>
+        <a href="DishitaMidha_Resume_240226.pdf" target="_blank" rel="noopener noreferrer" class="hero-link resume-btn-link" style="background: none; border: 1px solid var(--border); font-family: inherit; color: inherit; text-decoration: none;">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-8-6z"/><path d="M14 2v6h6M12 13h-2m0 4h-2m4-4h2m0 4h2" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+          Resume
+        </a>
         <a href="https://github.com/dishitamidha" target="_blank" class="hero-link">
           <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
           github.com/dishitamidha
